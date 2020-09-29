@@ -6,8 +6,26 @@
     "start": "nodemon ./bin/www",
     "compile": "tsc",
     "dev": "yarn run start",
-    "test": "jest ./src/__test__/app.test.ts --forceExit", 
+    "test": "jest ./src/__test__/app.test.ts --forceExit --maxWorkers=1", 
     "dev-start": "ts-node ./bin/www"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "*/src/_test/.+(ts|tsx|js)"
+    ]
   },
   "dependencies": {
     "@babel/preset-env": "^7.11.5",
