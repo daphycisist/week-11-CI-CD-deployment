@@ -6,7 +6,7 @@
     "start": "nodemon ./bin/www",
     "compile": "tsc",
     "dev": "yarn run start",
-    "test": "jest ./src/__test__/app.test.ts", 
+    "test": "jest ./src/__test__/app.test.ts --forceExit", 
     "dev-start": "ts-node ./bin/www"
   },
   "dependencies": {
