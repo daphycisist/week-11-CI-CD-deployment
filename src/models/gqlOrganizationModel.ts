@@ -11,7 +11,7 @@ const OrganizationSchema = {
   employees: { type: GraphQLNonNull(GraphQLList(GraphQLString)) },
 };
 
-
+ 
 const updateOrganizationSchema = {
   organization: { type: GraphQLString },
   products: { type: GraphQLList(GraphQLString) },
