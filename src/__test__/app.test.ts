@@ -3,7 +3,7 @@ import app from "../app";
 import mongoose from "mongoose";
 
 afterAll(() => {
-  mongoose.connection.dropDatabase()
+  // mongoose.connection.dropDatabase()
   mongoose.disconnect();
 });
 
