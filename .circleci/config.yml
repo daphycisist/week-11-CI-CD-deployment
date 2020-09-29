@@ -6,6 +6,6 @@ jobs:
 
     steps:
       - checkout
-      - run: npm install
-      - run: npx tsc
-      - run: npm test
+      - run: yarn
+      - run: yarn tsc
+      - run: yarn test
