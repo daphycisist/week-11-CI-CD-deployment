@@ -30,13 +30,13 @@ describe("Test all Root Queries on Organization", () => {
     request
       .post("/graphql1")
       .send({
-        query: '{OneOrganization(organization: "Third"){organization id}}',
+        query: '{OneOrganization(organization: "Spunk"){organization id}}',
       })
       .set("Accept", "application.json")
       .expect("Content-Type", /json/)
       .end(function (err, res) {
         if (err) return done(err);
-        expect(res.body.data.OneOrganization.organization).toEqual("Third");
+        expect(res.body.data.OneOrganization.organization).toEqual("Spunk");
         expect(res.body).toBeInstanceOf(Object);
         done();
       });
