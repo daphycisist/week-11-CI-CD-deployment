@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 name: Node.js CI
 
 on: [push]
+=======
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+>>>>>>> 89447c6d55faa85caf935df8854831c9fdb16cd6
 
 jobs:
   build:
@@ -9,7 +22,11 @@ jobs:
 
     strategy:
       matrix:
+<<<<<<< HEAD
         node-version: [8.x, 10.x, 12.x]
+=======
+        node-version: [10.x, 12.x, 14.x]
+>>>>>>> 89447c6d55faa85caf935df8854831c9fdb16cd6
 
     steps:
     - uses: actions/checkout@v2
@@ -20,5 +37,8 @@ jobs:
     - run: yarn
     - run: yarn tsc
     - run: yarn test
+<<<<<<< HEAD
       env:
         CI: true
+=======
+>>>>>>> 89447c6d55faa85caf935df8854831c9fdb16cd6
