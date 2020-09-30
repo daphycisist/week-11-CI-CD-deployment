@@ -3,7 +3,7 @@ import app from "../app";
 import mongoose from "mongoose";
 
 afterAll(() => {
-  // mongoose.connection.dropDatabase()
+  mongoose.connection.dropDatabase()
   mongoose.disconnect();
 });
 
@@ -173,8 +173,6 @@ describe("Test all Mutations on Organization", () => {
       .end(function (err, res) {
         if (err) return done(err);
         expect(res.status).toBe(200);
-        console.log(res.body.data.deleteOrganization);
-        
         expect(res.body.data.deleteOrganization.organization).toEqual(
           "Carrington"
         );
