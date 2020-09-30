@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "compile": "tsc -w",
+    "compile": "tsc",
     "dev": "yarn run start",
     "build": "bash -e scripts/build.sh",
     "test": "jest ./src/__test__/app.test.ts --forceExit --maxWorkers=1", 
