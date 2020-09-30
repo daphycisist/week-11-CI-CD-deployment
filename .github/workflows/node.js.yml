@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [12.x, 10.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,3 +22,5 @@ jobs:
     - run: yarn test
       env:
         CI: true
+
+
